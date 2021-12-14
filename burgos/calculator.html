@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css"
+    type="text/css"/>
+</head>
+<body>
+    <div>
+        <center><h2>My Simple Calculator</h2><hr/>
+        <input type="number" placeholder="Number1" 
+        id="num1"/>
+         <br/>
+        <input type="number" placeholder="Number2" 
+        id="num2"/>
+        <br/>
+        <button id="add" onclick="add()">+</button>
+        <button id="sub" onclick="sub()">-</button>
+        <button id="mul"  onclick="mul()">x</button>
+        <button id="div"  onclick="div()">/</button><br/>
+        <button id="About" onclick="about()" >About</button>
+        <button id="Clear" onclick="erase()" >Clear</button>
+        <input type="number" readonly id="result"/></center>
+    </div>
+    <script type="text/javascript">
+        function add(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var add = n1+n2
+            document.getElementById("result").value = add
+        }
+        function sub(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var sub = n1-n2
+            document.getElementById("result").value = sub
+        }
+        function mul(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var mul = n1*n2
+            document.getElementById("result").value = mul
+        }
+        function div(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var div = n1/n2
+            document.getElementById("result").value = div
+        }
+        function about(){
+           window.alert("Merry Christmas")
+        }
+        function erase(){
+            document.getElementById('num1').value = '';
+         document.getElementById('num2').value = '';
+           document.getElementById("result").value = '';
+        }
+    </script>
+</html>
